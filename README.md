@@ -8,6 +8,7 @@ via UDP, and it'll stuff it into Postgres for you
 
 # SCHEMA 
 
+~~~SQL
 CREATE TABLE public.logentries (
     id bigint NOT NULL,
     host character varying(64) NOT NULL,
@@ -15,6 +16,7 @@ CREATE TABLE public.logentries (
     data text,
     created_at timestamp without time zone DEFAULT now() NOT NULL
 );
+~~~
 
 # .etc file
 
