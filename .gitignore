@@ -1,0 +1,8 @@
+/bin/
+/lib/
+/.crystal/
+/.shards/
+shard.lock
+rats
+*.dwarf
+.env
