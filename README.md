@@ -16,6 +16,20 @@ CREATE TABLE public.logentries (
     data text,
     created_at timestamp without time zone DEFAULT now() NOT NULL
 );
+
+CREATE SEQUENCE public.logentries_sampleid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE ONLY public.logentries ALTER COLUMN id SET DEFAULT nextval('public.logentries_sampleid_seq'::regclass);
+
+ALTER TABLE ONLY public.logentries
+    ADD CONSTRAINT logentries_pkey PRIMARY KEY (id);
+
 ~~~
 
 # .etc file

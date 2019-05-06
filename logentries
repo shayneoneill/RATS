@@ -1,0 +1,6 @@
+DESCRIBE TABLE logentries
+;
+\d logentries
+\d+ logentries
+\?
+\s logentries
